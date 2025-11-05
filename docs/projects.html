@@ -41,7 +41,7 @@
   <div class="bg-[#F7F3E3] dark:bg-[#0B3954] rounded-lg shadow-lg overflow-hidden border-2 border-[#0B3954] dark:border-[#F7F3E3] z-0">
           <div class="aspect-w-16 aspect-h-9 bg-gray-200">
             <!-- Project image will go here -->
-             <img src="src/img/Text_Adventure_Cover.png" alt="Project Image" class="w-full h-full object-cover">
+             <img src="img/Text_Adventure_Cover.png" alt="Project Image" class="w-full h-full object-cover">
           </div>
           <div class="p-6">
             <h3 class="staatliches-regular text-2xl text-[#0B3954] dark:text-[#F7F3E3] mb-2">Text Adventure</h3>
@@ -53,7 +53,7 @@
         <div class="bg-[#F7F3E3] dark:bg-[#0B3954] rounded-lg shadow-lg overflow-hidden border-2 border-[#0B3954] dark:border-[#F7F3E3]">
           <div class="aspect-w-16 aspect-h-9 bg-gray-200">
             <!-- Project image will go here -->
-            <img src="src/img/Portfolio_v1_Image.png" alt="Project Image" class="w-full h-full object-cover">
+            <img src="img/Portfolio_v1_Image.png" alt="Project Image" class="w-full h-full object-cover">
           </div>
           <div class="p-6">
             <h3 class="staatliches-regular text-2xl text-[#0B3954] dark:text-[#F7F3E3] mb-2">Portfolio Website - old</h3>
@@ -66,7 +66,7 @@
           <a href="my-project-microgame.html" class="block hover:opacity-90 transition-opacity">
             <div class="aspect-w-16 aspect-h-9 bg-gray-200">
               <!-- Project image will go here -->
-              <img src="src/img/Microgame_Image.jpg" alt="Project Image" class="w-full h-full object-cover">
+              <img src="img/Microgame_Image.jpg" alt="Project Image" class="w-full h-full object-cover">
             </div>
             <div class="p-6">
               <h3 class="staatliches-regular text-2xl text-[#0B3954] dark:text-[#F7F3E3] mb-2">Microgame</h3>
@@ -78,7 +78,7 @@
         <div class="bg-[#F7F3E3] dark:bg-[#0B3954] rounded-lg shadow-lg overflow-hidden border-2 border-[#0B3954] dark:border-[#F7F3E3]">
           <div class="aspect-w-16 aspect-h-9 bg-gray-200">
             <!-- Project image will go here -->
-            <img src="src/img/Portfolio_v2_Image.png" alt="Project Image" class="w-full h-full object-cover">
+            <img src="img/Portfolio_v2_Image.png" alt="Project Image" class="w-full h-full object-cover">
           </div>
           <div class="p-6">
             <h3 class="staatliches-regular text-2xl text-[#0B3954] dark:text-[#F7F3E3] mb-2">Portfolio Website</h3>
@@ -87,40 +87,6 @@
         </div>
       </div>
     </main>
-    <script type="module" src="/src/main.js"></script>
-    <script>
-      // Wait for DOM to load
-      document.addEventListener('DOMContentLoaded', function() {
-        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
-        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
-        const themeToggleBtn = document.getElementById('theme-toggle');
-
-        // Set initial theme
-        if (localStorage.getItem('color-theme') === 'dark' || 
-            (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-          document.documentElement.classList.add('dark');
-          themeToggleDarkIcon.classList.add('hidden');
-          themeToggleLightIcon.classList.remove('hidden');
-        } else {
-          themeToggleLightIcon.classList.add('hidden');
-          themeToggleDarkIcon.classList.remove('hidden');
-        }
-
-        // Handle click event
-        themeToggleBtn.addEventListener('click', function() {
-          // Toggle theme
-          document.documentElement.classList.toggle('dark');
-          
-          // Toggle icons
-          themeToggleDarkIcon.classList.toggle('hidden');
-          themeToggleLightIcon.classList.toggle('hidden');
-          
-          // Save preference
-          localStorage.setItem('color-theme', 
-            document.documentElement.classList.contains('dark') ? 'dark' : 'light'
-          );
-        });
-      });
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>

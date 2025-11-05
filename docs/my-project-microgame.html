@@ -104,33 +104,6 @@ During the project, I also took on the role of Scrum Master. In this role, I man
         </div>
       </div>
     </main>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
-        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
-        const themeToggleBtn = document.getElementById('theme-toggle');
-
-        if (!themeToggleBtn) return;
-
-        // Initialize icons & theme
-        if (localStorage.getItem('color-theme') === 'dark' ||
-            (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-          document.documentElement.classList.add('dark');
-          if (themeToggleDarkIcon) themeToggleDarkIcon.classList.add('hidden');
-          if (themeToggleLightIcon) themeToggleLightIcon.classList.remove('hidden');
-        } else {
-          if (themeToggleLightIcon) themeToggleLightIcon.classList.add('hidden');
-          if (themeToggleDarkIcon) themeToggleDarkIcon.classList.remove('hidden');
-        }
-
-        themeToggleBtn.addEventListener('click', function() {
-          document.documentElement.classList.toggle('dark');
-          if (themeToggleDarkIcon) themeToggleDarkIcon.classList.toggle('hidden');
-          if (themeToggleLightIcon) themeToggleLightIcon.classList.toggle('hidden');
-          localStorage.setItem('color-theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
-        });
-      });
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>
