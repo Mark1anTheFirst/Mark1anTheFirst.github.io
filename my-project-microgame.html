@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/style.css">
+    <title>Microgame Project - Markian Tsypuk</title>
+  </head>
+  <body class="bg-[#F7F3E3] dark:bg-[#0B3954]">
+    <nav class="fixed top-0 w-full bg-[#F7F3E3] dark:bg-[#0B3954] p-4 shadow-md">
+      <div class="container mx-auto flex justify-between items-center">
+        <div class="border-l-4 border-[#0B3954] dark:border-[#F7F3E3] pl-2">
+          <h1 class="staatliches-regular text-4xl text-[#0B3954] dark:text-[#F7F3E3]">Markian Tsypuk</h1>
+          <h3 class="staatliches-regular text-lg text-[#0B3954] dark:text-[#F7F3E3]">Software Developer</h3>
+        </div>
+        <div class="flex gap-14 mr-6">
+          <a href="index.html" class="staatliches-regular text-[#0B3954] dark:text-[#F7F3E3] text-xl hover:text-gray-600">Home</a>
+          <a href="about.html" class="staatliches-regular text-[#0B3954] dark:text-[#F7F3E3] text-xl hover:text-gray-600">About</a>
+          <a href="projects.html" class="staatliches-regular text-[#0B3954] dark:text-[#F7F3E3] text-xl hover:text-gray-600">Projects</a>
+          <a href="contact.html" class="staatliches-regular text-[#0B3954] dark:text-[#F7F3E3] text-xl hover:text-gray-600">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Theme Toggle Button -->
+    <button id="theme-toggle" 
+            class="fixed top-20 right-6 z-50 p-2 text-[#0B3954] dark:text-[#F7F3E3] bg-[#F7F3E3] dark:bg-[#0B3954] hover:bg-gray-100 dark:hover:bg-[#0B3954] focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm shadow-lg">
+      <svg id="theme-toggle-dark-icon" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+      </svg>
+      <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+        <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"></path>
+      </svg>
+    </button>
+
+    <main class="container mx-auto pt-32 px-4">
+      <!-- Project Header -->
+      <div class="max-w-4xl mx-auto mb-12">
+        <h2 class="staatliches-regular text-6xl text-[#0B3954] dark:text-[#F7F3E3] text-center">Microgame</h2>
+      <hr class="w-1/3 mx-auto border-t-4 border-[#0B3954] dark:border-[#F7F3E3] borde my-5 mb-5">
+      </div>
+
+      <!-- Project Image -->
+      <div class="max-w-4xl mx-auto mb-12 rounded-lg overflow-hidden shadow-xl">
+        <img src="src/img/Microgame_Image.jpg" alt="Microgame Project Screenshot" class="w-full h-auto">
+      </div>
+
+      <!-- Project Content -->
+      <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Main Content -->
+        <div class="md:col-span-2 space-y-6">
+          <div class="prose dark:prose-invert">
+            <h2 class="staatliches-regular mt-8 text-3xl text-[#0B3954] dark:text-[#F7F3E3] mb-4">Project Overview</h2>
+            <p class="roboto text-[#0B3954] dark:text-[#F7F3E3] mb-4">
+              “Recoil” is a dynamic platformer with shooter mechanics, where the player uses their weapon not only to defeat enemies but also to launch themselves higher using the recoil. The goal of the game is to reach the highest possible height without dying. Along the way, the player encounters various types of enemies—both flying and walking—that add an extra challenge. As long as you have your weapon, obstacles and opponents can be overcome.
+            </p>
+            
+            <h2 class="staatliches-regular text-3xl text-[#0B3954] dark:text-[#F7F3E3] mb-4 mt-8">My role</h2>
+            <p class="roboto text-[#0B3954] dark:text-[#F7F3E3] mb-4">
+              For this project, I was responsible for implementing the logic for saving and uploading data, allowing players to retain and share their progress. Additionally, I designed and implemented the weapon menu, enabling players to easily switch between different weapons. I also contributed to the visual design of the project: I created paper concepts for all menus and the HUD to ensure the interface was clear and user-friendly.
+
+During the project, I also took on the role of Scrum Master. In this role, I managed the Git repository, coordinated collaboration within the team, and organized all project files. This ensured the team could work efficiently and maintain a clear overview of the project’s progress.
+            </p>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="space-y-8">
+          <div class="bg-[#F7F3E3] dark:bg-[#0B3954] p-6 rounded-lg shadow-lg border-2 border-[#0B3954] dark:border-[#F7F3E3]">
+            <h3 class="staatliches-regular text-2xl text-[#0B3954] dark:text-[#F7F3E3] mb-4">Project Details</h3>
+            <div class="space-y-4">
+              <div>
+                <h4 class="staatliches-regular text-lg text-[#0B3954] dark:text-[#F7F3E3]">Duration</h4>
+                <p class="roboto text-[#0B3954] dark:text-[#F7F3E3]">4 weeks</p>
+              </div>
+              <div>
+                <h4 class="staatliches-regular text-lg text-[#0B3954] dark:text-[#F7F3E3]">Role</h4>
+                <p class="roboto text-[#0B3954] dark:text-[#F7F3E3]">Scrum Master</p>
+              </div>
+              <div>
+                <h4 class="staatliches-regular text-lg text-[#0B3954] dark:text-[#F7F3E3]">Technologies</h4>
+                <p class="roboto text-[#0B3954] dark:text-[#F7F3E3]">Unity, C#, GitHub, Visual Studio, Trello</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-[#F7F3E3] dark:bg-[#0B3954] p-6 rounded-lg shadow-lg border-2 border-[#0B3954] dark:border-[#F7F3E3]">
+            <h3 class="staatliches-regular text-2xl text-[#0B3954] dark:text-[#F7F3E3] mb-4">Links</h3>
+            <div class="space-y-4">
+              <a href="https://github.com/Mark1anTheFirst/MiniGame" class="flex items-center space-x-2 text-[#0B3954] dark:text-[#F7F3E3] hover:opacity-80">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+                <span class="roboto">View Source Code</span>
+              </a>
+              <a href="https://www.youtube.com/shorts/FVENZuw0_7o" class="flex items-center space-x-2 text-[#0B3954] dark:text-[#F7F3E3] hover:opacity-80">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M21.593 7.203a2.506 2.506 0 0 0-1.762-1.766C18.265 5.007 12 5 12 5s-6.264-.007-7.831.404a2.56 2.56 0 0 0-1.766 1.778C2 8.769 2 12 2 12s0 3.233.403 4.778a2.506 2.506 0 0 0 1.767 1.766c1.566.411 7.83.404 7.83.404s6.264.007 7.831-.404a2.506 2.506 0 0 0 1.767-1.766C22 15.233 22 12 22 12s.037-3.233-.407-4.797z"/>
+                </svg>
+                <span class="roboto">Watch Demo</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+        const themeToggleBtn = document.getElementById('theme-toggle');
+
+        if (!themeToggleBtn) return;
+
+        // Initialize icons & theme
+        if (localStorage.getItem('color-theme') === 'dark' ||
+            (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+          if (themeToggleDarkIcon) themeToggleDarkIcon.classList.add('hidden');
+          if (themeToggleLightIcon) themeToggleLightIcon.classList.remove('hidden');
+        } else {
+          if (themeToggleLightIcon) themeToggleLightIcon.classList.add('hidden');
+          if (themeToggleDarkIcon) themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        themeToggleBtn.addEventListener('click', function() {
+          document.documentElement.classList.toggle('dark');
+          if (themeToggleDarkIcon) themeToggleDarkIcon.classList.toggle('hidden');
+          if (themeToggleLightIcon) themeToggleLightIcon.classList.toggle('hidden');
+          localStorage.setItem('color-theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+        });
+      });
+    </script>
+  </body>
+</html>

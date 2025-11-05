@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/style.css">
+    <title>Markian Tsypuk - Software Developer</title>
+  </head>
+  <body class="bg-[#F7F3E3] dark:bg-[#0B3954] min-h-screen">
+    <nav class="fixed top-0 w-full bg-[#F7F3E3] dark:bg-[#0B3954] p-4 shadow-md z-50">
+      <div class="container mx-auto flex justify-between items-center">
+        <div class="border-l-4 border-[#0B3954] dark:border-[#F7F3E3] pl-2">
+          <h1 class="staatliches-regular text-4xl text-[#0B3954] dark:text-[#F7F3E3]">Markian Tsypuk</h1>
+          <h3 class="staatliches-regular text-lg text-[#0B3954] dark:text-[#F7F3E3]">Software Developer</h3>
+        </div>
+        <div class="flex gap-14 mr-6 items-center">
+          <a href="index.html" class="staatliches-regular text-[#0B3954] dark:text-[#F7F3E3] text-xl hover:text-gray-600">Home</a>
+          <a href="about.html" class="staatliches-regular text-[#0B3954] dark:text-[#F7F3E3] text-xl hover:text-gray-600">About</a>
+          <a href="projects.html" class="staatliches-regular text-[#0B3954] dark:text-[#F7F3E3] text-xl hover:text-gray-600">Projects</a>
+          <a href="contact.html" class="staatliches-regular text-[#0B3954] dark:text-[#F7F3E3] text-xl hover:text-gray-600">Contact</a>
+        </div>
+      </div>
+    </nav>
+    
+    <!-- Theme Toggle Button -->
+    <button id="theme-toggle" 
+            class="fixed top-20 right-6 z-50 p-2 text-[#0B3954] dark:text-[#F7F3E3] bg-[#F7F3E3] dark:bg-[#0B3954] hover:bg-gray-100 dark:hover:bg-[#0B3954] focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm shadow-lg">
+      <svg id="theme-toggle-dark-icon" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+      </svg>
+      <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+        <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"></path>
+      </svg>
+    </button>
+
+    <main class="container mx-auto h-screen flex flex-col justify-center items-start px-4 lg:px-20">
+      <div class="max-w-4xl">
+        <h1 class="staatliches-regular text-6xl md:text-8xl lg:text-9xl text-[#0B3954] dark:text-[#F7F3E3] mb-4">
+          Hi! I'm Markian
+        </h1>
+        <h2 class="staatliches-regular text-3xl md:text-4xl text-[#0B3954] dark:text-[#F7F3E3] mb-6">
+          Junior Software Developer
+        </h2>
+        <div class="flex gap-6 mt-8">
+          <a href="/public/Markian_Tsypuk_CV.pdf" 
+          target="_blank"
+             class="staatliches-regular text-xl px-8 py-3 bg-[#0B3954] dark:bg-[#F7F3E3] text-[#F7F3E3] dark:text-[#0B3954] rounded-lg hover:opacity-90 transition-opacity">
+            View CV
+          </a>
+          <a href="contact.html"
+             class="staatliches-regular text-xl px-8 py-3 border-2 border-[#0B3954] dark:border-[#F7F3E3] text-[#0B3954] dark:text-[#F7F3E3] rounded-lg hover:bg-[#0B3954] hover:text-[#F7F3E3] dark:hover:bg-[#F7F3E3] dark:hover:text-[#0B3954] transition-colors">
+            Contact Me
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+    <script>
+      // Wait for DOM to load
+      document.addEventListener('DOMContentLoaded', function() {
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+        const themeToggleBtn = document.getElementById('theme-toggle');
+
+        // Set initial theme
+        if (localStorage.getItem('color-theme') === 'dark' || 
+            (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+          themeToggleDarkIcon.classList.add('hidden');
+          themeToggleLightIcon.classList.remove('hidden');
+        } else {
+          themeToggleLightIcon.classList.add('hidden');
+          themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        // Handle click event
+        themeToggleBtn.addEventListener('click', function() {
+          // Toggle theme
+          document.documentElement.classList.toggle('dark');
+          
+          // Toggle icons
+          themeToggleDarkIcon.classList.toggle('hidden');
+          themeToggleLightIcon.classList.toggle('hidden');
+          
+          // Save preference
+          localStorage.setItem('color-theme', 
+            document.documentElement.classList.contains('dark') ? 'dark' : 'light'
+          );
+        });
+      });
+    </script>
+  </body>
+</html>
